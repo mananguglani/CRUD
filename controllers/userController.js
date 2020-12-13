@@ -53,4 +53,4 @@ module.exports = {
     user_create_get,
     user_details,
     user_detete
-}
+};

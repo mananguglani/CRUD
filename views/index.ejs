@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <%- include('./partials/head.ejs') %>
+
 <body>
     <%- include('./partials/nav.ejs') %>
+
     <div class="users content">
         <h2>All users</h2>
         <% if(users.length > 0) { %>
@@ -16,6 +19,7 @@
             <p>There are no users.</p>
         <% } %>    
     </div>
+
     <%- include('./partials/footer.ejs') %>
 </body>
 </html>

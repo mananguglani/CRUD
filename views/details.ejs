@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <%- include('./partials/head.ejs') %>
+
 <body>
     <%- include('./partials/nav.ejs') %>
+
     <div class="details content">
         <h2><%= user.name %></h2>
         <div class="content">
@@ -10,7 +13,9 @@
         </div>
         <a class="delete" data-doc="<%= user._id %>">Delete</a>
     </div>
+
     <%- include('./partials/footer.ejs') %>
+    
     <script>
         const trashcan = document.querySelector('a.delete');
         trashcan.addEventListener('click', (e) => {
