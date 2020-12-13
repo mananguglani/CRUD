@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-const dbURI = require('./private/dbURI');
+const dbURI = 'mongodb+srv://Manan:Xifo4DchOfTiGfOv@cluster0.fwvnk.mongodb.net/users?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(result => app.listen(3000))
     .catch(err => console.log(err));
