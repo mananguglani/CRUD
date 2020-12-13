@@ -1,5 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const morgan = require('morgan');
+
+const User = require('./models/user');
+const userRoutes = require('./routes/userRoutes');
 
 const app = express();
 
@@ -9,3 +13,10 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(err => console.log(err));
 
 app.set('view engine', 'ejs');
+
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+app.use(morgan('dev'));
+
+app.use('/', userRoutes);
+
