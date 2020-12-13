@@ -29,7 +29,7 @@ const user_details = (req, res) => {
     const id = req.params.id;
     User.findById(id)
         .then(result => {
-            res.render('details', { user: result, title: 'Blog Details' });
+            res.render('details', { user: result, title: 'User Details' });
         })
         .catch(err => {
             console.log(err);
@@ -37,7 +37,7 @@ const user_details = (req, res) => {
 };
 
 const user_detete = (req, res) => {
-    const id = req.id.params;
+    const id = req.params.id;
     User.findByIdAndDelete(id)
         .then(result => {
             res.json({ redirect: '/' });

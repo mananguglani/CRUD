@@ -7,8 +7,10 @@
         <h2>All users</h2>
         <% if(users.length > 0) { %>
             <% users.forEach(user => { %>
-                <h3 class="name"><%= user.name %></h3>
-                <p class="mobile"><%= user.mobile %></p>
+                <a class="single" href="/users/<%= user._id %>">
+                    <h3 class="name"><%= user.name %></h3>
+                    <p class="mobile"><%= user.mobile %></p>
+                </a>
             <% }) %>
         <% } else { %>
             <p>There are no users.</p>
